@@ -17,7 +17,7 @@ Black = (0, 0, 0)
 # Creating the Button
 button = pygame.Rect(520,385, 350, 80)  # (x, y, width, height)
 
-font = pygame.font.Font("ShadowsIntoLight-Regular.ttf", 50)  # None is the default font, 36 is fonz size
+font = pygame.font.Font("ShadowsIntoLight-Regular.ttf", 50)  # None is the default font, 36 is fonz sizetext_surface = font.render("WAKE UP", True, Black)
 text_surface = font.render("WAKE UP", True, Black)
 
 current_screen = "main"  # main  screen that is on
@@ -40,7 +40,7 @@ while running:
             screen.blit(text_surface, (593, 385))
 
         elif current_screen == "game":
-            game.run(screen, White, Blue, Black, width, height)  # pass these defs towards game file
+            game.run(screen, White, Blue, Black, width, height, current_screen)  # pass these defs towards game file
             
     pygame.display.flip() # Update the display to see the changes
 
